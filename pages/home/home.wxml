@@ -34,6 +34,14 @@
 				</picker>
 			</view>
 			<view class="section">
+				<picker bindchange="bindHourChange" value="{{gender}}" range="{{genderLs}}">
+					<view class="picker">
+						<view class="section-text">生时: </view>
+						<view class="section-val">{{time}}</view>
+					</view>
+				</picker>
+			</view>
+			<view class="section">
 				<picker bindchange="bindPickerChange" value="{{gender}}" range="{{genderLs}}">
 					<view class="picker">
 						<view class="section-text">性别: </view>
