@@ -1,5 +1,6 @@
 Page({
 	data: {
+		dateType: 1,
 		dateLs: [],
 		date: '2016-09-01',
 		time: '12:01',
@@ -31,6 +32,12 @@ Page({
 		var currentDateString = year + '-' + month + '-' + day;  
 
 		return currentDateString;
+	},
+	bindCalendarType: function(e) {
+	    var type = e.currentTarget.dataset.type;
+	    this.setData({
+			dateType: type
+		})
 	},
 	bindDateChange: function(e) {
 		this.setData({

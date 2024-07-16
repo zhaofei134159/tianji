@@ -11,37 +11,39 @@
 			</swiper-item>
 		</swiper>  
 	</view>
-	<view class="search-container">
-		<view class="section">
-			<view class="section-key section-active">阳历</view>
-			<view class="section-key">阴历</view>
-		</view>
-		<view class="section">
-			<picker mode="date" value="{{date}}" start="{{dateLs[0]}}" end="{{dateLs[1]}}"  bindchange="bindDateChange">
-				<view class="picker">
-					<view class="section-text">生日: </view>
-					<view class="section-val">{{date}}</view>
-				</view>
-			</picker>
-		</view>
-		<view class="section">
-			<picker mode="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindTimeChange">
-				<view class="picker">
-					<view class="section-text">生时: </view>
-					<view class="section-val">{{time}}</view>
-				</view>
-			</picker>
-		</view>
-		<view class="section">
-			<picker bindchange="bindPickerChange" value="{{gender}}" range="{{genderLs}}">
-				<view class="picker">
-					<view class="section-text">性别: </view>
-					<view class="section-val">{{genderLs[gender]}}</view>
-				</view>
-			</picker>
-		</view>
-		<view class="section">
-			<view class="section-botton">搜索</view>
+	<view class="search-main">
+		<view class="search-container">
+			<view class="section">
+				<view class="section-key {{dateType==1 ? 'section-active' : ''}}" bindtap="bindCalendarType" data-type="1">阳历</view>
+				<view class="section-key {{dateType==2 ? 'section-active' : ''}}" bindtap="bindCalendarType" data-type="2">阴历</view>
+			</view>
+			<view class="section">
+				<picker mode="date" value="{{date}}" start="{{dateLs[0]}}" end="{{dateLs[1]}}"  bindchange="bindDateChange">
+					<view class="picker">
+						<view class="section-text">生日: </view>
+						<view class="section-val">{{date}}</view>
+					</view>
+				</picker>
+			</view>
+			<view class="section">
+				<picker mode="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindTimeChange">
+					<view class="picker">
+						<view class="section-text">生时: </view>
+						<view class="section-val">{{time}}</view>
+					</view>
+				</picker>
+			</view>
+			<view class="section">
+				<picker bindchange="bindPickerChange" value="{{gender}}" range="{{genderLs}}">
+					<view class="picker">
+						<view class="section-text">性别: </view>
+						<view class="section-val">{{genderLs[gender]}}</view>
+					</view>
+				</picker>
+			</view>
+			<view class="section">
+				<view class="section-botton">搜索</view>
+			</view>
 		</view>
 	</view>
 	<view class="hot-containner"></view>
