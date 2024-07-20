@@ -1,0 +1,7 @@
+<!--pages/plate/plate.wxml-->
+<navigation-bar title="{{pageTitle}}" back="{{false}}" color="#3f3d3d" background="#FFF"></navigation-bar>
+<scroll-view class="scrollarea" scroll-y type="list">
+	<view class="scroll-main">
+		<view class="main-plate"></view>
+	</view>
+</scroll-view>

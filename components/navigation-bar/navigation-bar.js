@@ -55,7 +55,8 @@ Component({
    * 组件的初始数据
    */
   data: {
-    displayStyle: ''
+    displayStyle: '',
+    appletName: "墨香随笔"
   },
   lifetimes: {
     attached() {

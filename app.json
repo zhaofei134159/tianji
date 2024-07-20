@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/plate/plate",
     "pages/home/home",
     "pages/help/help",
     "pages/user/user"
@@ -15,7 +16,7 @@
     "selectedColor": "#333",
     "list": [
       {
-        "pagePath": "pages/home/home",
+        "pagePath": "pages/plate/plate",
         "iconPath": "resource/images/home.png",
         "selectedIconPath": "resource/images/home-active.png"
       },

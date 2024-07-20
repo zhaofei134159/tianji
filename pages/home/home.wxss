@@ -17,7 +17,7 @@ page {
 
 /* 轮播 */  
 .scrollarea .swiper-container {width: 100%;height: 235px;}
-.swiper-container .swiper-list {height: 100%;}
+.swiper-container .swiper-list {height: 100%; display:none;}
 .swiper-container .swiper-list .slide-image {width: 100%; height: 100%; display: block;}
 
 /* 主体 */

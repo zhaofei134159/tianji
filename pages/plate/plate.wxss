@@ -1,0 +1,15 @@
+/* pages/plate/plate.wxss */
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.scrollarea {
+	flex: 1;
+	overflow-y: hidden;
+}
+
+/* 紫微排盘 */
+.scroll-main {width: 100%; background:red;}
+.scroll-main .main-plate{width: 80%; background:green; height:800px;}

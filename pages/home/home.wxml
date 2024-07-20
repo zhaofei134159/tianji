@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<navigation-bar title="Weixin" back="{{false}}" color="black" background="#FFF"></navigation-bar>
+<navigation-bar title="{{pageTitle}}" back="{{false}}" color="black" background="#FFF"></navigation-bar>
 <scroll-view class="scrollarea" scroll-y type="list">
 	<view class="swiper-container">  
 		<swiper indicator-dots="true" autoplay="true" class="swiper-list">  
@@ -17,7 +17,7 @@
 				<view class="section-key {{dateType==1 ? 'section-active' : ''}}" bindtap="bindCalendarType" data-type="1">阳历</view>
 				<view class="section-key {{dateType==2 ? 'section-active' : ''}}" bindtap="bindCalendarType" data-type="2">阴历</view>
 			</view>
-			<view class="section">
+			<view class="section" wx:if="{{dateType == 1}}">
 				<picker mode="date" value="{{date}}" start="{{dateLs[0]}}" end="{{dateLs[1]}}"  bindchange="bindDateChange">
 					<view class="picker">
 						<view class="section-text">生日: </view>
@@ -25,7 +25,17 @@
 					</view>
 				</picker>
 			</view>
-			<view class="section">
+			<view class="section" wx:if="{{dateType == 2}}">
+				<picker mode="multiSelector" bindchange="bindLunarDateChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{lunarLs}}" range="{{lunarDateLs}}">
+					<view class="picker">
+						<view class="section-text">生日: </view>
+						<view class="section-val">
+							{{lunarDateLs[0][lunarLs[0]]}} / {{lunarDateLs[1][lunarLs[1]]}} / {{lunarDateLs[2][lunarLs[2]]}}
+						</view>
+					</view>
+				</picker>
+			</view>
+			<view class="section" wx:if="{{dateType == 1}}">
 				<picker mode="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindTimeChange">
 					<view class="picker">
 						<view class="section-text">生时: </view>
@@ -33,11 +43,11 @@
 					</view>
 				</picker>
 			</view>
-			<view class="section">
-				<picker bindchange="bindHourChange" value="{{gender}}" range="{{genderLs}}">
+			<view class="section" wx:if="{{dateType == 2}}">
+				<picker bindchange="bindHourChange" value="{{Hour}}" range="{{HourLs}}">
 					<view class="picker">
 						<view class="section-text">生时: </view>
-						<view class="section-val">{{time}}</view>
+						<view class="section-val">{{HourLs[Hour]}}</view>
 					</view>
 				</picker>
 			</view>
@@ -50,7 +60,7 @@
 				</picker>
 			</view>
 			<view class="section">
-				<view class="section-botton">搜索</view>
+				<view class="section-botton" bindtap="bindSearch">搜索</view>
 			</view>
 		</view>
 	</view>

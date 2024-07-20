@@ -38,7 +38,7 @@
 }
 
 .weui-navigation-bar__btn_goback_wrapper {
-  padding: 11px 18px 11px 16px;
+  padding: 22px 18px 11px 16px;
   margin: -11px -18px -11px -16px;
 }
 
@@ -58,7 +58,7 @@
 }
 
 .weui-navigation-bar__center {
-  font-size: 17px;
+  font-size: 14px;
   text-align: center;
   position: relative;
   display: flex;
