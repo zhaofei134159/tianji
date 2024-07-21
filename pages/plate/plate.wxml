@@ -1,7 +1,344 @@
 <!--pages/plate/plate.wxml-->
-<navigation-bar title="{{pageTitle}}" back="{{false}}" color="#3f3d3d" background="#FFF"></navigation-bar>
+<navigation-bar title="{{pageTitle}}" back="{{true}}" color="#3f3d3d" background="#FFF"></navigation-bar>
 <scroll-view class="scrollarea" scroll-y type="list">
-	<view class="scroll-main">
-		<view class="main-plate"></view>
+	<view class="flex-wrp" style="flex-direction:column;">
+		<view class="flex-item-V flex-wrp" style="flex-direction:row;">
+			<view class="flex-item1 item-dingwei">
+				<view class="item-line" style="background:red;">1</view>
+				<view class="item-line item-line-h" style="background:green;">2</view>
+				<view class="item-line item-line-h flex-wrp" style="flex-direction:row;">
+					<view class="flex-item1 item-line-w item-dw">
+						<view class="item-cs-star">
+							{{dateTimeData['palace']['巳']['cs_star'][0]}}
+						</view>
+					</view>
+					<view class="flex-item1 item-line-w2">
+						<view class="item-place-top item-dw">
+							<view class="item-place-shen" wx:if="{{dateTimeData['palace']['巳']['palaceNameShen']}}">
+								{{dateTimeData['palace']['巳']['palaceNameShen']}}
+							</view>
+						</view>
+						<view class="item-place-top item-dw">
+							<view class="item-place">
+								{{dateTimeData['palace']['巳']['palaceName']}}
+							</view>
+						</view>
+					</view>
+					<view class="flex-item1 item-line-w item-dw">
+						<view class="item-gan">{{dateTimeData['palace']['巳']['gan']}}</view>
+						<view class="item-zhi">巳</view>
+					</view>
+				</view>
+			</view>
+			<view class="flex-item2 item-dingwei">
+				<view class="item-line" style="background:red;">1</view>
+				<view class="item-line item-line-h" style="background:green;">2</view>
+				<view class="item-line item-line-h flex-wrp" style="flex-direction:row;">
+					<view class="flex-item1 item-line-w item-dw">
+						<view class="item-cs-star">
+							{{dateTimeData['palace']['午']['cs_star'][0]}}
+						</view>
+					</view>
+					<view class="flex-item1 item-line-w2">
+						<view class="item-place-top item-dw">
+							<view class="item-place-shen" wx:if="{{dateTimeData['palace']['午']['palaceNameShen']}}">
+								{{dateTimeData['palace']['午']['palaceNameShen']}}
+							</view>
+						</view>
+						<view class="item-place-top item-dw">
+							<view class="item-place">
+								{{dateTimeData['palace']['午']['palaceName']}}
+							</view>
+						</view>
+					</view>
+					<view class="flex-item1 item-line-w item-dw">
+						<view class="item-gan">{{dateTimeData['palace']['午']['gan']}}</view>
+						<view class="item-zhi">午</view>
+					</view>
+				</view>
+			</view>
+			<view class="flex-item3 item-dingwei">
+				<view class="item-line" style="background:red;">1</view>
+				<view class="item-line item-line-h" style="background:green;">2</view>
+				<view class="item-line item-line-h flex-wrp" style="flex-direction:row;">
+					<view class="flex-item1 item-line-w item-dw">
+						<view class="item-cs-star">
+							{{dateTimeData['palace']['未']['cs_star'][0]}}
+						</view>
+					</view>
+					<view class="flex-item1 item-line-w2">
+						<view class="item-place-top item-dw">
+							<view class="item-place-shen" wx:if="{{dateTimeData['palace']['未']['palaceNameShen']}}">
+								{{dateTimeData['palace']['未']['palaceNameShen']}}
+							</view>
+						</view>
+						<view class="item-place-top item-dw">
+							<view class="item-place">
+								{{dateTimeData['palace']['未']['palaceName']}}
+							</view>
+						</view>
+					</view>
+					<view class="flex-item1 item-line-w item-dw">
+						<view class="item-gan">{{dateTimeData['palace']['未']['gan']}}</view>
+						<view class="item-zhi">未</view>
+					</view>
+				</view>
+			</view>
+			<view class="flex-item1 item-dingwei">
+				<view class="item-line" style="background:red;">1</view>
+				<view class="item-line item-line-h" style="background:green;">2</view>
+				<view class="item-line item-line-h flex-wrp" style="flex-direction:row;">
+					<view class="flex-item1 item-line-w item-dw">
+						<view class="item-cs-star">
+							{{dateTimeData['palace']['申']['cs_star'][0]}}
+						</view>
+					</view>
+					<view class="flex-item1 item-line-w2">
+						<view class="item-place-top item-dw">
+							<view class="item-place-shen" wx:if="{{dateTimeData['palace']['申']['palaceNameShen']}}">
+								{{dateTimeData['palace']['申']['palaceNameShen']}}
+							</view>
+						</view>
+						<view class="item-place-top item-dw">
+							<view class="item-place">
+								{{dateTimeData['palace']['申']['palaceName']}}
+							</view>
+						</view>
+					</view>
+					<view class="flex-item1 item-line-w item-dw">
+						<view class="item-gan">{{dateTimeData['palace']['申']['gan']}}</view>
+						<view class="item-zhi">申</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="flex-item-V2 flex-wrp" style="flex-direction:row;">
+			<view class="flex-item-1 flex-wrp" style="flex-direction:column;">
+				<view class="flex-item-V2-1 item-dingwei">
+					<view class="item-line" style="background:red;">1</view>
+					<view class="item-line item-line-h" style="background:green;">2</view>
+					<view class="item-line item-line-h flex-wrp" style="flex-direction:row;">
+						<view class="flex-item1 item-line-w item-dw">
+							<view class="item-cs-star">
+								{{dateTimeData['palace']['辰']['cs_star'][0]}}
+							</view>
+						</view>
+						<view class="flex-item1 item-line-w2">
+							<view class="item-place-top item-dw">
+								<view class="item-place-shen" wx:if="{{dateTimeData['palace']['辰']['palaceNameShen']}}">
+									{{dateTimeData['palace']['辰']['palaceNameShen']}}
+								</view>
+							</view>
+							<view class="item-place-top item-dw">
+								<view class="item-place">
+									{{dateTimeData['palace']['辰']['palaceName']}}
+								</view>
+							</view>
+						</view>
+						<view class="flex-item1 item-line-w item-dw">
+							<view class="item-gan">{{dateTimeData['palace']['辰']['gan']}}</view>
+							<view class="item-zhi">辰</view>
+						</view>
+					</view>
+				</view>
+				<view class="flex-item-V2-1 item-dingwei">
+					<view class="item-line" style="background:red;">1</view>
+					<view class="item-line item-line-h" style="background:green;">2</view>
+					<view class="item-line item-line-h flex-wrp" style="flex-direction:row;">
+						<view class="flex-item1 item-line-w item-dw">
+							<view class="item-cs-star">
+								{{dateTimeData['palace']['卯']['cs_star'][0]}}
+							</view>
+						</view>
+						<view class="flex-item1 item-line-w2">
+							<view class="item-place-top item-dw">
+								<view class="item-place-shen" wx:if="{{dateTimeData['palace']['卯']['palaceNameShen']}}">
+									{{dateTimeData['palace']['卯']['palaceNameShen']}}
+								</view>
+							</view>
+							<view class="item-place-top item-dw">
+								<view class="item-place">
+									{{dateTimeData['palace']['卯']['palaceName']}}
+								</view>
+							</view>
+						</view>
+						<view class="flex-item1 item-line-w item-dw">
+							<view class="item-gan">{{dateTimeData['palace']['卯']['gan']}}</view>
+							<view class="item-zhi">卯</view>
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="flex-item-2" style="background:blue;">
+				<view class="flex-item-2-1 item-dingwei">
+				</view>
+			</view>
+			<view class="flex-item-1 flex-wrp" style="flex-direction:column;">
+				<view class="flex-item-V2-1 item-dingwei">
+					<view class="item-line" style="background:red;">1</view>
+					<view class="item-line item-line-h" style="background:green;">2</view>
+					<view class="item-line item-line-h flex-wrp" style="flex-direction:row;">
+						<view class="flex-item1 item-line-w item-dw">
+							<view class="item-cs-star">
+								{{dateTimeData['palace']['酉']['cs_star'][0]}}
+							</view>
+						</view>
+						<view class="flex-item1 item-line-w2">
+							<view class="item-place-top item-dw">
+								<view class="item-place-shen" wx:if="{{dateTimeData['palace']['酉']['palaceNameShen']}}">
+									{{dateTimeData['palace']['酉']['palaceNameShen']}}
+								</view>
+							</view>
+							<view class="item-place-top item-dw">
+								<view class="item-place">
+									{{dateTimeData['palace']['酉']['palaceName']}}
+								</view>
+							</view>
+						</view>
+						<view class="flex-item1 item-line-w item-dw">
+							<view class="item-gan">{{dateTimeData['palace']['酉']['gan']}}</view>
+							<view class="item-zhi">酉</view>
+						</view>
+					</view>
+				</view>
+				<view class="flex-item-V2-1 item-dingwei">
+					<view class="item-line" style="background:red;">1</view>
+					<view class="item-line item-line-h" style="background:green;">2</view>
+					<view class="item-line item-line-h flex-wrp" style="flex-direction:row;">
+						<view class="flex-item1 item-line-w item-dw">
+							<view class="item-cs-star">
+								{{dateTimeData['palace']['戌']['cs_star'][0]}}
+							</view>
+						</view>
+						<view class="flex-item1 item-line-w2">
+							<view class="item-place-top item-dw">
+								<view class="item-place-shen" wx:if="{{dateTimeData['palace']['戌']['palaceNameShen']}}">
+									{{dateTimeData['palace']['戌']['palaceNameShen']}}
+								</view>
+							</view>
+							<view class="item-place-top item-dw">
+								<view class="item-place">
+									{{dateTimeData['palace']['戌']['palaceName']}}
+								</view>
+							</view>
+						</view>
+						<view class="flex-item1 item-line-w item-dw">
+							<view class="item-gan">{{dateTimeData['palace']['戌']['gan']}}</view>
+							<view class="item-zhi">戌</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="flex-item-V flex-wrp" style="flex-direction:row;">
+			<view class="flex-item1 item-dingwei">
+				<view class="item-line" style="background:red;">1</view>
+				<view class="item-line item-line-h" style="background:green;">2</view>
+				<view class="item-line item-line-h flex-wrp" style="flex-direction:row;">
+					<view class="flex-item1 item-line-w item-dw">
+						<view class="item-cs-star">
+							{{dateTimeData['palace']['寅']['cs_star'][0]}}
+						</view>
+					</view>
+					<view class="flex-item1 item-line-w2">
+						<view class="item-place-top item-dw">
+							<view class="item-place-shen" wx:if="{{dateTimeData['palace']['寅']['palaceNameShen']}}">
+								{{dateTimeData['palace']['寅']['palaceNameShen']}}
+							</view>
+						</view>
+						<view class="item-place-top item-dw">
+							<view class="item-place">
+								{{dateTimeData['palace']['寅']['palaceName']}}
+							</view>
+						</view>
+					</view>
+					<view class="flex-item1 item-line-w item-dw">
+						<view class="item-gan">{{dateTimeData['palace']['寅']['gan']}}</view>
+						<view class="item-zhi">寅</view>
+					</view>
+				</view>
+			</view>
+			<view class="flex-item2 item-dingwei">
+				<view class="item-line" style="background:red;">1</view>
+				<view class="item-line item-line-h" style="background:green;">2</view>
+				<view class="item-line item-line-h flex-wrp" style="flex-direction:row;">
+					<view class="flex-item1 item-line-w item-dw">
+						<view class="item-cs-star">
+							{{dateTimeData['palace']['丑']['cs_star'][0]}}
+						</view>
+					</view>
+					<view class="flex-item1 item-line-w2">
+						<view class="item-place-top item-dw">
+							<view class="item-place-shen" wx:if="{{dateTimeData['palace']['丑']['palaceNameShen']}}">
+								{{dateTimeData['palace']['丑']['palaceNameShen']}}
+							</view>
+						</view>
+						<view class="item-place-top item-dw">
+							<view class="item-place">
+								{{dateTimeData['palace']['丑']['palaceName']}}
+							</view>
+						</view>
+					</view>
+					<view class="flex-item1 item-line-w item-dw">
+						<view class="item-gan">{{dateTimeData['palace']['丑']['gan']}}</view>
+						<view class="item-zhi">丑</view>
+					</view>
+				</view>
+			</view>
+			<view class="flex-item3 item-dingwei">
+				<view class="item-line" style="background:red;">1</view>
+				<view class="item-line item-line-h" style="background:green;">2</view>
+				<view class="item-line item-line-h flex-wrp" style="flex-direction:row;">
+					<view class="flex-item1 item-line-w item-dw">
+						<view class="item-cs-star">
+							{{dateTimeData['palace']['子']['cs_star'][0]}}
+						</view>
+					</view>
+					<view class="flex-item1 item-line-w2">
+						<view class="item-place-top item-dw">
+							<view class="item-place-shen" wx:if="{{dateTimeData['palace']['子']['palaceNameShen']}}">
+								{{dateTimeData['palace']['子']['palaceNameShen']}}
+							</view>
+						</view>
+						<view class="item-place-top item-dw">
+							<view class="item-place">
+								{{dateTimeData['palace']['子']['palaceName']}}
+							</view>
+						</view>
+					</view>
+					<view class="flex-item1 item-line-w item-dw">
+						<view class="item-gan">{{dateTimeData['palace']['子']['gan']}}</view>
+						<view class="item-zhi">子</view>
+					</view>
+				</view>
+			</view>
+			<view class="flex-item1 item-dingwei">
+				<view class="item-line" style="background:red;">1</view>
+				<view class="item-line item-line-h" style="background:green;">2</view>
+				<view class="item-line item-line-h flex-wrp" style="flex-direction:row;">
+					<view class="flex-item1 item-line-w item-dw">
+						<view class="item-cs-star">
+							{{dateTimeData['palace']['亥']['cs_star'][0]}}
+						</view>
+					</view>
+					<view class="flex-item1 item-line-w2">
+						<view class="item-place-top item-dw">
+							<view class="item-place-shen" wx:if="{{dateTimeData['palace']['亥']['palaceNameShen']}}">
+								{{dateTimeData['palace']['亥']['palaceNameShen']}}
+							</view>
+						</view>
+						<view class="item-place-top item-dw">
+							<view class="item-place">
+								{{dateTimeData['palace']['亥']['palaceName']}}
+							</view>
+						</view>
+					</view>
+					<view class="flex-item1 item-line-w item-dw">
+						<view class="item-gan">{{dateTimeData['palace']['亥']['gan']}}</view>
+						<view class="item-zhi">亥</view>
+					</view>
+				</view>
+			</view>
+		</view>
 	</view>
 </scroll-view>

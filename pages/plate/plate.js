@@ -48,8 +48,11 @@ Page({
    */
   onReachBottom() {}
 
+
   /**
    * 用户点击右上角分享
    */
   // onShareAppMessage() {}
+
+  // 定义一个函数来判断属性是否存在  
 })

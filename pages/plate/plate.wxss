@@ -11,5 +11,47 @@ page {
 }
 
 /* 紫微排盘 */
-.scroll-main {width: 100%; background:red;}
-.scroll-main .main-plate{width: 80%; background:green; height:800px;}
+.scrollarea .plate-main{width:100%; min-height: 200px;}
+
+/* 上下盘 */
+.scrollarea .plate-main .plate-container {background-color: rgba(204,204,204,0.4); margin: 0px 1%; border-radius: 5px;color: black; height:150px;}
+.plate-container .section {width:25%; height:100%; background: green; font-size: 15px; float:left;}
+
+/* 中盘 */
+.scrollarea .plate-main .plate-center {background-color: rgba(204,204,204,0.4); margin: 0px 1%; border-radius: 5px;color: black; height:300px;}
+.plate-center .plate-center-left {width:25%; height:100%; display:inline-block; font-size: 15px; float:left;}
+.plate-center .plate-center-zhong {width:50%; height:100%; display:inline-block; background: blue; font-size: 15px; float:left;}
+.plate-center .plate-center-right {width:25%; height:100%; display:inline-block; font-size: 15px; float:right;}
+.plate-center .section {width:100%; height:50%; background: red; font-size: 15px; float:left;}
+
+
+
+.flex-wrp{display:flex; font-size: 12px;}
+.flex-wrp .flex-item-V{margin: 0 auto; width: 735rpx; height: 270rpx;}
+.flex-wrp .flex-item1{width: 180rpx; height: 270rpx; font-size: 26rpx; }
+.flex-wrp .flex-item2{width: 190rpx; height: 270rpx; font-size: 26rpx; }
+.flex-wrp .flex-item3{width: 195rpx; height: 270rpx; font-size: 26rpx; }
+.flex-wrp .flex-item-V2{margin: 0 auto; width: 735rpx; height: 540rpx;}
+.flex-wrp .flex-item-1{width: 180rpx; height: 540rpx; font-size: 26rpx; }
+.flex-wrp .flex-item-V2-1{margin: 0 auto; width: 180rpx; height: 270rpx;}
+.flex-wrp .flex-item-2{width: 385rpx; height: 540rpx; font-size: 26rpx; }
+.flex-wrp .flex-item-2-1{width: 100%; height: 100%;}
+
+.flex-wrp .item-dingwei{/*border: 1rpx solid #aaa;box-sizing: border-box;*/ box-shadow: 0 0 2rpx 0 #aaa;}
+.item-dingwei .item-line{width:100%; height:40%;}
+.item-dingwei .item-line-h{height:30%;}
+.item-dingwei .item-line .item-line-w{width:20%; height:100%; display:inline-block;}
+.item-dingwei .item-line .item-line-w2{width:60%; height:100%; display:inline-block;text-align:center;}
+.item-dingwei .item-line .item-line-w2 .item-place-top{width:100%; height:50%;}
+
+/* 排盘 */
+.flex-wrp .item-dw{position: relative;}
+.item-dw .item-zhi{display: inline; position: absolute; bottom: 5rpx; right: 5rpx; font-weight:bold;font-size: 12px;}
+.item-dw .item-gan{display: inline;font-size: 12px;font-weight: bold;right: 5rpx;position: absolute; bottom: 17px;}
+.item-dw .item-place{background: red; padding: 0rpx 10rpx; color: #fff; font-size: 12px;margin-top: 5rpx;display: inline-block;}
+.item-dw .item-place-shen{border: solid 1rpx green; padding: 0rpx 10rpx; color: green; font-size: 10px; margin-top: 5rpx; display: inline-block;}
+.item-dw .item-cs-star{display: inline; position: absolute; left: 5rpx; font-size: 10px; color: #993300; bottom: 5rpx;}
+
+
+
+
