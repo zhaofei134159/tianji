@@ -2,13 +2,34 @@
 <navigation-bar title="{{pageTitle}}" back="{{true}}" color="#3f3d3d" background="#FFF"></navigation-bar>
 <scroll-view class="scrollarea" scroll-y type="list">
 	<view class="flex-wrp" style="flex-direction:column;">
-		<view class="flex-item-V flex-wrp" style="flex-direction:row;">
+		<view class="flex-item-V flex-wrp" style="flex-direction:row; border-top: 1rpx solid #aaa;">
 			<view class="flex-item1 item-dingwei">
-				<view class="item-line" style="background:red;">1</view>
-				<view class="item-line item-line-h" style="background:green;">2</view>
+				<view class="item-line item-dw">
+					<view wx:for="{{dateTimeData['palace']['巳']['jia_main_star']}}" wx:key="jiamain" class="item-star main-star">
+						{{item}}
+						<span class="trun-star" wx:if="{{dateTimeData['palace']['巳']['foreTurn'][item]}}">
+							{{dateTimeData['palace']['巳']['foreTurn'][item]}}
+						</span>
+					</view>
+					<view wx:for="{{dateTimeData['palace']['巳']['jia_fu_star']}}" wx:key="jiafu" class="item-star main-star">  
+					  {{item}}
+					</view>
+					<view wx:for="{{dateTimeData['palace']['巳']['yi_fu_star']}}" wx:key="yistar" class="item-star yi-star">  
+					  {{item}}
+					</view>
+					<view wx:for="{{dateTimeData['palace']['巳']['bing_fu_star']}}" wx:key="bingstar" class="item-star bing-star">  
+					  {{item}}
+					</view>
+					<view wx:for="{{dateTimeData['palace']['巳']['ding_fu_star']}}" wx:key="dingstar" class="item-star ding-star">  
+					  {{item}}
+					</view>
+					<view wx:for="{{dateTimeData['palace']['巳']['wu_fu_star']}}" wx:key="wustar" class="item-star wu-star">  
+					  {{item}}
+					</view>
+				</view>
 				<view class="item-line item-line-h flex-wrp" style="flex-direction:row;">
 					<view class="flex-item1 item-line-w item-dw">
-						<view class="item-cs-star">
+						<view class="item-star cs-star">
 							{{dateTimeData['palace']['巳']['cs_star'][0]}}
 						</view>
 					</view>
@@ -31,11 +52,32 @@
 				</view>
 			</view>
 			<view class="flex-item2 item-dingwei">
-				<view class="item-line" style="background:red;">1</view>
-				<view class="item-line item-line-h" style="background:green;">2</view>
+				<view class="item-line item-dw">
+					<view wx:for="{{dateTimeData['palace']['午']['jia_main_star']}}" wx:key="jiamain" class="item-star main-star">
+						{{item}}
+						<span class="trun-star" wx:if="{{dateTimeData['palace']['午']['foreTurn'][item]}}">
+							{{dateTimeData['palace']['午']['foreTurn'][item]}}
+						</span>
+					</view>
+					<view wx:for="{{dateTimeData['palace']['午']['jia_fu_star']}}" wx:key="jiafu" class="item-star main-star">  
+					  {{item}}
+					</view>
+					<view wx:for="{{dateTimeData['palace']['午']['yi_fu_star']}}" wx:key="jiamain" class="item-star yi-star">  
+					  {{item}}
+					</view>
+					<view wx:for="{{dateTimeData['palace']['午']['bing_fu_star']}}" wx:key="bingstar" class="item-star bing-star">  
+					  {{item}}
+					</view>
+					<view wx:for="{{dateTimeData['palace']['午']['ding_fu_star']}}" wx:key="dingstar" class="item-star ding-star">  
+					  {{item}}
+					</view>
+					<view wx:for="{{dateTimeData['palace']['午']['wu_fu_star']}}" wx:key="wustar" class="item-star wu-star">  
+					  {{item}}
+					</view>
+				</view>
 				<view class="item-line item-line-h flex-wrp" style="flex-direction:row;">
 					<view class="flex-item1 item-line-w item-dw">
-						<view class="item-cs-star">
+						<view class="item-star cs-star">
 							{{dateTimeData['palace']['午']['cs_star'][0]}}
 						</view>
 					</view>
@@ -58,11 +100,32 @@
 				</view>
 			</view>
 			<view class="flex-item3 item-dingwei">
-				<view class="item-line" style="background:red;">1</view>
-				<view class="item-line item-line-h" style="background:green;">2</view>
+				<view class="item-line item-dw">
+					<view wx:for="{{dateTimeData['palace']['未']['jia_main_star']}}" wx:key="jiamain" class="item-star main-star">
+						{{item}}
+						<span class="trun-star" wx:if="{{dateTimeData['palace']['未']['foreTurn'][item]}}">
+							{{dateTimeData['palace']['未']['foreTurn'][item]}}
+						</span>
+					</view>
+					<view wx:for="{{dateTimeData['palace']['未']['jia_fu_star']}}" wx:key="jiafu" class="item-star main-star">  
+					  {{item}}
+					</view>
+					<view wx:for="{{dateTimeData['palace']['未']['yi_fu_star']}}" wx:key="jiamain" class="item-star yi-star">  
+					  {{item}}
+					</view>
+					<view wx:for="{{dateTimeData['palace']['未']['bing_fu_star']}}" wx:key="bingstar" class="item-star bing-star">  
+					  {{item}}
+					</view>
+					<view wx:for="{{dateTimeData['palace']['未']['ding_fu_star']}}" wx:key="dingstar" class="item-star ding-star">  
+					  {{item}}
+					</view>
+					<view wx:for="{{dateTimeData['palace']['未']['wu_fu_star']}}" wx:key="wustar" class="item-star wu-star">  
+					  {{item}}
+					</view>
+				</view>
 				<view class="item-line item-line-h flex-wrp" style="flex-direction:row;">
 					<view class="flex-item1 item-line-w item-dw">
-						<view class="item-cs-star">
+						<view class="item-star cs-star">
 							{{dateTimeData['palace']['未']['cs_star'][0]}}
 						</view>
 					</view>
@@ -85,11 +148,32 @@
 				</view>
 			</view>
 			<view class="flex-item1 item-dingwei">
-				<view class="item-line" style="background:red;">1</view>
-				<view class="item-line item-line-h" style="background:green;">2</view>
+				<view class="item-line item-dw">
+					<view wx:for="{{dateTimeData['palace']['申']['jia_main_star']}}" wx:key="jiamain" class="item-star main-star">
+						{{item}}
+						<span class="trun-star" wx:if="{{dateTimeData['palace']['申']['foreTurn'][item]}}">
+							{{dateTimeData['palace']['申']['foreTurn'][item]}}
+						</span>
+					</view>
+					<view wx:for="{{dateTimeData['palace']['申']['jia_fu_star']}}" wx:key="jiafu" class="item-star main-star">  
+					  {{item}}
+					</view>
+					<view wx:for="{{dateTimeData['palace']['申']['yi_fu_star']}}" wx:key="jiamain" class="item-star yi-star">  
+					  {{item}}
+					</view>
+					<view wx:for="{{dateTimeData['palace']['申']['bing_fu_star']}}" wx:key="bingstar" class="item-star bing-star">  
+					  {{item}}
+					</view>
+					<view wx:for="{{dateTimeData['palace']['申']['ding_fu_star']}}" wx:key="dingstar" class="item-star ding-star">  
+					  {{item}}
+					</view>
+					<view wx:for="{{dateTimeData['palace']['申']['wu_fu_star']}}" wx:key="wustar" class="item-star wu-star">  
+					  {{item}}
+					</view>
+				</view>
 				<view class="item-line item-line-h flex-wrp" style="flex-direction:row;">
 					<view class="flex-item1 item-line-w item-dw">
-						<view class="item-cs-star">
+						<view class="item-star cs-star">
 							{{dateTimeData['palace']['申']['cs_star'][0]}}
 						</view>
 					</view>
@@ -115,11 +199,32 @@
 		<view class="flex-item-V2 flex-wrp" style="flex-direction:row;">
 			<view class="flex-item-1 flex-wrp" style="flex-direction:column;">
 				<view class="flex-item-V2-1 item-dingwei">
-					<view class="item-line" style="background:red;">1</view>
-					<view class="item-line item-line-h" style="background:green;">2</view>
+					<view class="item-line item-dw">
+						<view wx:for="{{dateTimeData['palace']['辰']['jia_main_star']}}" wx:key="jiamain" class="item-star main-star">
+							{{item}}
+							<span class="trun-star" wx:if="{{dateTimeData['palace']['辰']['foreTurn'][item]}}">
+								{{dateTimeData['palace']['辰']['foreTurn'][item]}}
+							</span>
+						</view>
+						<view wx:for="{{dateTimeData['palace']['辰']['jia_fu_star']}}" wx:key="jiafu" class="item-star main-star">  
+						  {{item}}
+						</view>
+						<view wx:for="{{dateTimeData['palace']['辰']['yi_fu_star']}}" wx:key="jiamain" class="item-star yi-star">  
+						  {{item}}
+						</view>
+						<view wx:for="{{dateTimeData['palace']['辰']['bing_fu_star']}}" wx:key="bingstar" class="item-star bing-star">  
+						  {{item}}
+						</view>
+						<view wx:for="{{dateTimeData['palace']['辰']['ding_fu_star']}}" wx:key="dingstar" class="item-star ding-star">  
+						  {{item}}
+						</view>
+						<view wx:for="{{dateTimeData['palace']['辰']['wu_fu_star']}}" wx:key="wustar" class="item-star wu-star">  
+						  {{item}}
+						</view>
+					</view>
 					<view class="item-line item-line-h flex-wrp" style="flex-direction:row;">
 						<view class="flex-item1 item-line-w item-dw">
-							<view class="item-cs-star">
+							<view class="item-star cs-star">
 								{{dateTimeData['palace']['辰']['cs_star'][0]}}
 							</view>
 						</view>
@@ -142,11 +247,32 @@
 					</view>
 				</view>
 				<view class="flex-item-V2-1 item-dingwei">
-					<view class="item-line" style="background:red;">1</view>
-					<view class="item-line item-line-h" style="background:green;">2</view>
+					<view class="item-line item-dw">
+						<view wx:for="{{dateTimeData['palace']['卯']['jia_main_star']}}" wx:key="jiamain" class="item-star main-star">
+							{{item}}
+							<span class="trun-star" wx:if="{{dateTimeData['palace']['卯']['foreTurn'][item]}}">
+								{{dateTimeData['palace']['卯']['foreTurn'][item]}}
+							</span>
+						</view>
+						<view wx:for="{{dateTimeData['palace']['卯']['jia_fu_star']}}" wx:key="jiafu" class="item-star main-star">  
+						  {{item}}
+						</view>
+						<view wx:for="{{dateTimeData['palace']['卯']['yi_fu_star']}}" wx:key="jiamain" class="item-star yi-star">  
+						  {{item}}
+						</view>
+						<view wx:for="{{dateTimeData['palace']['卯']['bing_fu_star']}}" wx:key="bingstar" class="item-star bing-star">  
+						  {{item}}
+						</view>
+						<view wx:for="{{dateTimeData['palace']['卯']['ding_fu_star']}}" wx:key="dingstar" class="item-star ding-star">  
+						  {{item}}
+						</view>
+						<view wx:for="{{dateTimeData['palace']['卯']['wu_fu_star']}}" wx:key="wustar" class="item-star wu-star">  
+						  {{item}}
+						</view>
+					</view>
 					<view class="item-line item-line-h flex-wrp" style="flex-direction:row;">
 						<view class="flex-item1 item-line-w item-dw">
-							<view class="item-cs-star">
+							<view class="item-star cs-star">
 								{{dateTimeData['palace']['卯']['cs_star'][0]}}
 							</view>
 						</view>
@@ -169,17 +295,41 @@
 					</view>
 				</view>
 			</view>
-			<view class="flex-item-2" style="background:blue;">
-				<view class="flex-item-2-1 item-dingwei">
+			<view class="flex-item-2 flex-wrp" style="flex-direction:column;">
+				<view class="flex-item-2-1 item-dingwei" style="background:red">
+					<view>{{palaceName}}</view>
 				</view>
+				<view class="flex-item-2-2 item-dingwei" style="background:green"></view>
+				<view class="flex-item-2-1 item-dingwei" style="background:red"></view>
 			</view>
 			<view class="flex-item-1 flex-wrp" style="flex-direction:column;">
 				<view class="flex-item-V2-1 item-dingwei">
-					<view class="item-line" style="background:red;">1</view>
-					<view class="item-line item-line-h" style="background:green;">2</view>
+					<view class="item-line item-dw">
+						<view wx:for="{{dateTimeData['palace']['酉']['jia_main_star']}}" wx:key="jiamain" class="item-star main-star">
+							{{item}}
+							<span class="trun-star" wx:if="{{dateTimeData['palace']['酉']['foreTurn'][item]}}">
+								{{dateTimeData['palace']['酉']['foreTurn'][item]}}
+							</span>
+						</view>
+						<view wx:for="{{dateTimeData['palace']['酉']['jia_fu_star']}}" wx:key="jiafu" class="item-star main-star">  
+						  {{item}}
+						</view>
+						<view wx:for="{{dateTimeData['palace']['酉']['yi_fu_star']}}" wx:key="jiamain" class="item-star yi-star">  
+						  {{item}}
+						</view>
+						<view wx:for="{{dateTimeData['palace']['酉']['bing_fu_star']}}" wx:key="bingstar" class="item-star bing-star">  
+						  {{item}}
+						</view>
+						<view wx:for="{{dateTimeData['palace']['酉']['ding_fu_star']}}" wx:key="dingstar" class="item-star ding-star">  
+						  {{item}}
+						</view>
+						<view wx:for="{{dateTimeData['palace']['酉']['wu_fu_star']}}" wx:key="wustar" class="item-star wu-star">  
+						  {{item}}
+						</view>
+					</view>
 					<view class="item-line item-line-h flex-wrp" style="flex-direction:row;">
 						<view class="flex-item1 item-line-w item-dw">
-							<view class="item-cs-star">
+							<view class="item-star cs-star">
 								{{dateTimeData['palace']['酉']['cs_star'][0]}}
 							</view>
 						</view>
@@ -202,11 +352,32 @@
 					</view>
 				</view>
 				<view class="flex-item-V2-1 item-dingwei">
-					<view class="item-line" style="background:red;">1</view>
-					<view class="item-line item-line-h" style="background:green;">2</view>
+					<view class="item-line item-dw">
+						<view wx:for="{{dateTimeData['palace']['戌']['jia_main_star']}}" wx:key="jiamain" class="item-star main-star">
+							{{item}}
+							<span class="trun-star" wx:if="{{dateTimeData['palace']['戌']['foreTurn'][item]}}">
+								{{dateTimeData['palace']['戌']['foreTurn'][item]}}
+							</span>
+						</view>
+						<view wx:for="{{dateTimeData['palace']['戌']['jia_fu_star']}}" wx:key="jiafu" class="item-star main-star">  
+						  {{item}}
+						</view>
+						<view wx:for="{{dateTimeData['palace']['戌']['yi_fu_star']}}" wx:key="jiamain" class="item-star yi-star">  
+						  {{item}}
+						</view>
+						<view wx:for="{{dateTimeData['palace']['戌']['bing_fu_star']}}" wx:key="bingstar" class="item-star bing-star">  
+						  {{item}}
+						</view>
+						<view wx:for="{{dateTimeData['palace']['戌']['ding_fu_star']}}" wx:key="dingstar" class="item-star ding-star">  
+						  {{item}}
+						</view>
+						<view wx:for="{{dateTimeData['palace']['戌']['wu_fu_star']}}" wx:key="wustar" class="item-star wu-star">  
+						  {{item}}
+						</view>
+					</view>
 					<view class="item-line item-line-h flex-wrp" style="flex-direction:row;">
 						<view class="flex-item1 item-line-w item-dw">
-							<view class="item-cs-star">
+							<view class="item-star cs-star">
 								{{dateTimeData['palace']['戌']['cs_star'][0]}}
 							</view>
 						</view>
@@ -232,11 +403,32 @@
 		</view>
 		<view class="flex-item-V flex-wrp" style="flex-direction:row;">
 			<view class="flex-item1 item-dingwei">
-				<view class="item-line" style="background:red;">1</view>
-				<view class="item-line item-line-h" style="background:green;">2</view>
+				<view class="item-line item-dw">
+					<view wx:for="{{dateTimeData['palace']['寅']['jia_main_star']}}" wx:key="jiamain" class="item-star main-star">
+						{{item}}
+						<span class="trun-star" wx:if="{{dateTimeData['palace']['寅']['foreTurn'][item]}}">
+							{{dateTimeData['palace']['寅']['foreTurn'][item]}}
+						</span>
+					</view>
+					<view wx:for="{{dateTimeData['palace']['寅']['jia_fu_star']}}" wx:key="jiafu" class="item-star main-star">  
+					  {{item}}
+					</view>
+					<view wx:for="{{dateTimeData['palace']['寅']['yi_fu_star']}}" wx:key="jiamain" class="item-star yi-star">  
+					  {{item}}
+					</view>
+					<view wx:for="{{dateTimeData['palace']['寅']['bing_fu_star']}}" wx:key="bingstar" class="item-star bing-star">  
+					  {{item}}
+					</view>
+					<view wx:for="{{dateTimeData['palace']['寅']['ding_fu_star']}}" wx:key="dingstar" class="item-star ding-star">  
+					  {{item}}
+					</view>
+					<view wx:for="{{dateTimeData['palace']['寅']['wu_fu_star']}}" wx:key="wustar" class="item-star wu-star">  
+					  {{item}}
+					</view>
+				</view>
 				<view class="item-line item-line-h flex-wrp" style="flex-direction:row;">
 					<view class="flex-item1 item-line-w item-dw">
-						<view class="item-cs-star">
+						<view class="item-star cs-star">
 							{{dateTimeData['palace']['寅']['cs_star'][0]}}
 						</view>
 					</view>
@@ -259,11 +451,32 @@
 				</view>
 			</view>
 			<view class="flex-item2 item-dingwei">
-				<view class="item-line" style="background:red;">1</view>
-				<view class="item-line item-line-h" style="background:green;">2</view>
+				<view class="item-line item-dw">
+					<view wx:for="{{dateTimeData['palace']['丑']['jia_main_star']}}" wx:key="jiamain" class="item-star main-star">  
+						{{item}}
+				  		<span class="trun-star" wx:if="{{dateTimeData['palace']['丑']['foreTurn'][item]}}">
+				  			{{dateTimeData['palace']['丑']['foreTurn'][item]}}
+				  		</span>
+					</view>
+					<view wx:for="{{dateTimeData['palace']['丑']['jia_fu_star']}}" wx:key="jiafu" class="item-star main-star">  
+					  {{item}}
+					</view>
+					<view wx:for="{{dateTimeData['palace']['丑']['yi_fu_star']}}" wx:key="jiamain" class="item-star yi-star">  
+					  {{item}}
+					</view>
+					<view wx:for="{{dateTimeData['palace']['丑']['bing_fu_star']}}" wx:key="bingstar" class="item-star bing-star">  
+					  {{item}}
+					</view>
+					<view wx:for="{{dateTimeData['palace']['丑']['ding_fu_star']}}" wx:key="dingstar" class="item-star ding-star">  
+					  {{item}}
+					</view>
+					<view wx:for="{{dateTimeData['palace']['丑']['wu_fu_star']}}" wx:key="wustar" class="item-star wu-star">  
+					  {{item}}
+					</view>
+				</view>
 				<view class="item-line item-line-h flex-wrp" style="flex-direction:row;">
 					<view class="flex-item1 item-line-w item-dw">
-						<view class="item-cs-star">
+						<view class="item-star cs-star">
 							{{dateTimeData['palace']['丑']['cs_star'][0]}}
 						</view>
 					</view>
@@ -286,11 +499,32 @@
 				</view>
 			</view>
 			<view class="flex-item3 item-dingwei">
-				<view class="item-line" style="background:red;">1</view>
-				<view class="item-line item-line-h" style="background:green;">2</view>
+				<view class="item-line item-dw">
+					<view wx:for="{{dateTimeData['palace']['子']['jia_main_star']}}" wx:key="jiamain" class="item-star main-star">  
+				  		{{item}}
+				  		<span class="trun-star" wx:if="{{dateTimeData['palace']['子']['foreTurn'][item]}}">
+				  			{{dateTimeData['palace']['子']['foreTurn'][item]}}
+				  		</span>
+					</view>
+					<view wx:for="{{dateTimeData['palace']['子']['jia_fu_star']}}" wx:key="jiafu" class="item-star main-star">  
+					  {{item}}
+					</view>
+					<view wx:for="{{dateTimeData['palace']['子']['yi_fu_star']}}" wx:key="jiamain" class="item-star yi-star">  
+					  {{item}}
+					</view>
+					<view wx:for="{{dateTimeData['palace']['子']['bing_fu_star']}}" wx:key="bingstar" class="item-star bing-star">  
+					  {{item}}
+					</view>
+					<view wx:for="{{dateTimeData['palace']['子']['ding_fu_star']}}" wx:key="dingstar" class="item-star ding-star">  
+					  {{item}}
+					</view>
+					<view wx:for="{{dateTimeData['palace']['子']['wu_fu_star']}}" wx:key="wustar" class="item-star wu-star">  
+					  {{item}}
+					</view>
+				</view>
 				<view class="item-line item-line-h flex-wrp" style="flex-direction:row;">
 					<view class="flex-item1 item-line-w item-dw">
-						<view class="item-cs-star">
+						<view class="item-star cs-star">
 							{{dateTimeData['palace']['子']['cs_star'][0]}}
 						</view>
 					</view>
@@ -313,11 +547,32 @@
 				</view>
 			</view>
 			<view class="flex-item1 item-dingwei">
-				<view class="item-line" style="background:red;">1</view>
-				<view class="item-line item-line-h" style="background:green;">2</view>
+				<view class="item-line item-dw">
+					<view wx:for="{{dateTimeData['palace']['亥']['jia_main_star']}}" wx:key="jiamain" class="item-star main-star">
+						{{item}}
+						<span class="trun-star" wx:if="{{dateTimeData['palace']['亥']['foreTurn'][item]}}">
+							{{dateTimeData['palace']['亥']['foreTurn'][item]}}
+						</span>
+					</view>
+					<view wx:for="{{dateTimeData['palace']['亥']['jia_fu_star']}}" wx:key="jiafu" class="item-star main-star">  
+					  {{item}}
+					</view>
+					<view wx:for="{{dateTimeData['palace']['亥']['yi_fu_star']}}" wx:key="jiamain" class="item-star yi-star">  
+					  {{item}}
+					</view>
+					<view wx:for="{{dateTimeData['palace']['亥']['bing_fu_star']}}" wx:key="bingstar" class="item-star bing-star">  
+					  {{item}}
+					</view>
+					<view wx:for="{{dateTimeData['palace']['亥']['ding_fu_star']}}" wx:key="dingstar" class="item-star ding-star">  
+					  {{item}}
+					</view>
+					<view wx:for="{{dateTimeData['palace']['亥']['wu_fu_star']}}" wx:key="wustar" class="item-star wu-star">  
+					  {{item}}
+					</view>
+				</view>
 				<view class="item-line item-line-h flex-wrp" style="flex-direction:row;">
 					<view class="flex-item1 item-line-w item-dw">
-						<view class="item-cs-star">
+						<view class="item-star cs-star">
 							{{dateTimeData['palace']['亥']['cs_star'][0]}}
 						</view>
 					</view>

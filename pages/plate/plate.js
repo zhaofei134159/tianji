@@ -1,11 +1,13 @@
 // 配置js
 var conf = require('../../resource/js/conf.js'),
-  util = require('../../resource/js/util.js');
+  util = require('../../resource/js/util.js'),
+  WxParse = require('../../resource/js/wxParse/wxParse.js');
 
 // pages/plate/plate.js
 Page({
   data: {
     pageTitle: '紫微排盘',
+    palaceName: '掐指一算',
     dateTimeData: {}
   },
   onLoad(options) {
